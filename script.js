@@ -92,7 +92,7 @@ function Game() {
         const Mscore = document.querySelector(".score");
         MHscore.textContent=HighScore;
         Mscore.textContent =score;
-
+        let head;
         if (direction == "left") {
             head = { x: snake[0].x, y: snake[0].y - 1 }
         }
