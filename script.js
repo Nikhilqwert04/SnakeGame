@@ -75,7 +75,7 @@ function render() {
 
     });
 
-    blocks[`${appX}-${appY}`].classList.add("bg-yellow-100");
+    blocks[`${appX}-${appY}`].classList.add("bg-red-100");
 }
 
 function GameStart() {
@@ -112,7 +112,7 @@ function Game() {
 
 
         if (head.y == appY && head.x == appX) {
-            blocks[`${appX}-${appY}`].classList.remove("bg-yellow-100");
+            blocks[`${appX}-${appY}`].classList.remove("bg-red-100");
             snake.push(blocks[`${appX}-${appY}`]);
             score = score + 1;
             Mscore.textContent = score;
@@ -126,12 +126,12 @@ function Game() {
 
         snake.forEach(element => {
             if (element.x == appX && element.y == appY) {
-                blocks[`${appX}-${appY}`].classList.remove("bg-yellow-100");
+                blocks[`${appX}-${appY}`].classList.remove("bg-red-100");
                 eatapple();
             }
         })
 
-        if (head.x < 0 || head.x >= rows || head.y < 0 || head.x >= cols) {
+        if (head.x < 0 || head.x >= rows || head.y < 0 || head.y >= cols) {
             clearInterval(endinterval);
             alert("Game over");
             GameStart();
