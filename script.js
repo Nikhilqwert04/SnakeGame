@@ -6,7 +6,7 @@ const rows = Math.floor(board.clientHeight / height);
 const cols = Math.floor(board.clientWidth / width);
 const MHscore = document.querySelector(".Hscore");
 const blocks = [];
-const snake = [{ x: 1, y: 3 }];
+const snake = [{ x: 0, y: 1 }];
 let score = 0;
 let Mtimer = 0
 let direction = "right";
@@ -82,7 +82,7 @@ function GameStart() {
     score = 0;
     console.log("Here!!!!");
     snake.length = 0;
-    snake.push({x:1, y:3});
+    snake.push({x:0, y:1});
     direction = "right";
     Game();
 }
