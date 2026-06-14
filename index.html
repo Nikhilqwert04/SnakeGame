@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Snake</title>
+    <meta name="description" content="A neon-themed Snake game built with Vite and Tailwind CSS.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="relative bg-[#111111] box-border">
+    <div class="w-screen h-auto flex justify-between text-white  bold">
+      <div class="border p-2 rounded-2xl">High Score: <span class="Hscore"></span></div>
+      <div class="border p-2 rounded-2xl">Score: <span class="score"></span></div>
+      <div class="border p-2 rounded-2xl">Time: <span class="timer"></span></div>
+    </div>  
+    <div class=" board border border-white w-full h-[94vh] grid grid-cols-[repeat(auto-fill,minmax(30px,1fr))] grid-rows-[repeat(auto-fill,minmax(30px,1fr))]">
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
